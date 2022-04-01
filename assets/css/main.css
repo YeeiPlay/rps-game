@@ -1,49 +1,110 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-#rock {
-  border-radius: 10px;
-  width: 100px;
-  padding: 20px;
-  color: white;
-  background-color: rgb(85, 85, 85);
+.mainApp {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  max-width: 100vw;
+  flex-wrap: wrap;
+  height: 100vh;
+  animation-duration: 1s;
+  animation-name: bounceIn;
+  align-items: center;
 }
 
-
-#scissors {
-  border-radius: 10px;
-  width: 100px;
-  padding: 20px;
-  color: white;
-  background-color: rgb(235, 74, 0);
-}
-
-#paper {
-  border-radius: 10px;
-  width: 100px;
-  padding: 20px;
-  color: rgb(0, 0, 0);
-  background-color: rgb(240, 240, 240);
-}
-
-#btnPlay {
-  border-radius: 10px;
-  width: 200px;
-  padding: 30px;
-  color: rgb(0, 0, 0);
-  background-color: rgb(240, 240, 240);
-  font-size: 30px;
-}
-
-.containerButtons {
+.containerScore {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  gap: 25px;
-  flex-direction: column;
+  gap: 60px;
+  padding: 50px;
+  margin-bottom: 250px;
+  margin-top: -250px;
 }
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.2);
+
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animateScissor {
+  0% {
+    filter: hue-rotate(12deg);
+  }
+  100% {
+    filter: hue-rotate(100deg);
+  }
+}
+
+.iconImg:hover {
+  background-color: rgb(26, 26, 26);
+  width: 190px;
+  border-radius: 80px;
+  cursor: pointer;
+  animation: animateScissor linear 0.1s infinite;
+}
+
+.iconImg {
+  background-color: rgb(26, 26, 26);
+  width: 100px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .containerScore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+    padding: 20px;
+    font-size: 18px;
+    margin-top: 70px;
+    margin-bottom: 2px;
+  }
+
+  .mainApp {
+    display: flex;
+    gap: 16px;
+    margin-top: 50px;
+    justify-content: center;
+    width: 100vw;
+    height: 60vh;
+    flex-direction: column;
+    animation-duration: 1s;
+    animation-name: bounceIn;
+    align-items: center;
+  }
+  .iconImg {
+    background-color: rgb(26, 26, 26);
+    width: 130px;
+    border-radius: 80px;
+    cursor: pointer;
+  }
+  .iconImg:hover {
+    background-color: rgb(26, 26, 26);
+    width: 150px;
+    border-radius: 70px;
+    cursor: pointer;
+    animation: animateScissor linear 0.1s infinite;
+  }  
+}
+ 

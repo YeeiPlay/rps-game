@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <title>Rock Paper Sizzors</title>
-</head>
-<body>
-  
-  <div class="containerButtons"> 
-    <button class="gameOptions" id="rock">ROCK</button>
-    <button class="gameOptions" id="paper">PAPER</button>
-    <button class="gameOptions" id="scissors">SCISSORS</button>
-    <br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="mainApp">
+      <div class="imgWrapperOne">
+        <img id="rock" class="iconImg" src="./assets/img/rock.png" alt="rock" />
+      </div>
+
+      <div class="imgWrapperTwo">
+        <img
+          id="paper"
+          class="iconImg"
+          src="./assets/img/paper.png"
+          alt="paper"
+        />
+      </div>
+
+      <div class="imgWrapperThree">
+        <img
+          id="scissors"
+          class="iconImg"
+          src="./assets/img/scissors.png"
+          alt="scissors"
+        />
+      </div>
+    </div>
     <div class="containerScore">
-      <h4>Player: <span id="playerScore">0</span></h4> 
-      <br>
+      <h4>Player: <span id="playerScore">0</span></h4>
+      <br />
       <h4>PC: <span id="pcScore">0</span></h4>
-      <br>
+      <br />
       <h4>Tie: <span id="tieScore">0</span></h4>
     </div>
-  </div>
-  <script src="./assets/js/main.js"></script>
-</body>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
